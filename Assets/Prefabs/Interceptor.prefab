@@ -463,6 +463,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2590135070371109281}
   - component: {fileID: 2590135070371109282}
+  - component: {fileID: 4230616122053529739}
   m_Layer: 0
   m_Name: Point Light
   m_TagString: Untagged
@@ -497,13 +498,13 @@ Light:
   m_Type: 2
   m_Shape: 0
   m_Color: {r: 0.16862746, g: 0.5529412, b: 1, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Intensity: 2
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -547,6 +548,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &4230616122053529739
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2590135070371109280}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e598e8b987608a3478c3ce2bf4021f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startColor: {r: 0.16862746, g: 0.5529412, b: 1, a: 1}
+  endColor: {r: 1, g: 0, b: 0, a: 1}
 --- !u!1 &2590135070372378441
 GameObject:
   m_ObjectHideFlags: 0
@@ -592,6 +607,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2590135070793721303}
   - component: {fileID: 2590135070793721384}
+  - component: {fileID: 8486602119385565167}
   m_Layer: 0
   m_Name: Point Light (1)
   m_TagString: Untagged
@@ -625,14 +641,14 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 1, g: 0, b: 0.009137154, a: 1}
-  m_Intensity: 1
-  m_Range: 10
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
+  m_Intensity: 2
+  m_Range: 5
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
   m_Shadows:
-    m_Type: 0
+    m_Type: 2
     m_Resolution: -1
     m_CustomResolution: -1
     m_Strength: 1
@@ -676,6 +692,20 @@ Light:
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &8486602119385565167
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2590135070793721302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e598e8b987608a3478c3ce2bf4021f43, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startColor: {r: 1, g: 0, b: 0, a: 1}
+  endColor: {r: 0.16862746, g: 0.5529412, b: 1, a: 1}
 --- !u!1 &2590135071970050068
 GameObject:
   m_ObjectHideFlags: 0
