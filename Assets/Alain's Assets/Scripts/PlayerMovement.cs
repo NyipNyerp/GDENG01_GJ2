@@ -17,11 +17,14 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector3 velocity;
     bool isGrounded;
 
+    [SerializeField] public int lives = 5;
+    float immuneCounter = 0;
 
     // Update is called once per frame
     void Update()
     {
         Walk();
+        immuneCounter -= Time.deltaTime;
     }
 
     private void Walk()
@@ -42,5 +45,14 @@ public class PlayerMovement : MonoBehaviour
         velocity.y += gravity * Time.deltaTime;
 
         controller.Move(velocity * Time.deltaTime);
+    }
+
+    public void TakeDamage()
+    {
+        if (immuneCounter < 0 && lives > 0)
+        {
+            lives--;
+            immuneCounter = 5;
+        }
     }
 }
