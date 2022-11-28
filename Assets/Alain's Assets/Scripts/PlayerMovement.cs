@@ -17,7 +17,7 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector3 velocity;
     bool isGrounded;
 
-    [SerializeField] public int lives = 5;
+    public int lives = 5;
     float immuneCounter = 0;
 
     // Update is called once per frame
