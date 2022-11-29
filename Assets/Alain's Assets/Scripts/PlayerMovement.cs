@@ -54,5 +54,9 @@ public class PlayerMovement : MonoBehaviour
             lives--;
             immuneCounter = 5;
         }
+        else if (lives <= 0)
+        {
+            // GAME OVER = LOSE
+        }
     }
 }

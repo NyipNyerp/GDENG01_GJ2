@@ -133,7 +133,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (16)
@@ -399,7 +399,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (12)
@@ -920,7 +920,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (11)
@@ -1047,7 +1047,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (17)
@@ -1112,7 +1112,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (19)
@@ -1964,7 +1964,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (18)
@@ -5261,7 +5261,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (4)
@@ -5331,7 +5331,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (1)
@@ -6338,7 +6338,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (6)
@@ -7029,7 +7029,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (14)
@@ -7643,7 +7643,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (13)
@@ -9073,7 +9073,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (3)
@@ -10476,7 +10476,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (2)
@@ -10616,7 +10616,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (7)
@@ -11511,7 +11511,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (5)
@@ -11576,7 +11576,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (10)
@@ -12381,7 +12381,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (9)
@@ -12503,7 +12503,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (15)
@@ -13960,7 +13960,7 @@ PrefabInstance:
     - target: {fileID: 880853959, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: player
       value: 
-      objectReference: {fileID: 8157217690259898728}
+      objectReference: {fileID: 0}
     - target: {fileID: 4803014352389650695, guid: 06cb2b131fe009c47a523671a8fa9ed8, type: 3}
       propertyPath: m_Name
       value: Zombie3 (8)
@@ -21451,6 +21451,7 @@ GameObject:
   - component: {fileID: 8157217691292129155}
   - component: {fileID: 8157217691292129152}
   - component: {fileID: 8157217691292129157}
+  - component: {fileID: 8157217691292129160}
   - component: {fileID: 8157217691292129153}
   - component: {fileID: 8157217691292129159}
   - component: {fileID: 8157217691292129158}
@@ -21552,3 +21553,18 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &8157217691292129160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157217691292129156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a3a8875ee3c654083f74f1c07ec57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialTime: 300
+  currentTime: 0
+  debugMultiplier: 1
