@@ -4,12 +4,11 @@ using UnityEngine;
 
 public class Flashlight : MonoBehaviour
 {
-    [SerializeField] private GameObject flashlight;
-    [SerializeField] private bool isOn = true;
+    private Light flashlight;
 
     void Start()
     {
-        flashlight.SetActive(isOn);
+        flashlight = GetComponent<Light>();
     }
 
     // Update is called once per frame
@@ -17,14 +16,7 @@ public class Flashlight : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.F))
         {
-            if (isOn)
-            {
-                flashlight.SetActive(true);
-            }
-            else
-            {
-                flashlight.SetActive(false);
-            }
+            flashlight.enabled = !flashlight.enabled;
         }
     }
 }

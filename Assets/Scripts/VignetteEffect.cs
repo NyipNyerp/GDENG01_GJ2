@@ -10,7 +10,7 @@ public class VignetteEffect : MonoBehaviour
 
     [SerializeField] private float initialTime = 300;
     [SerializeField] private float currentTime = 0;
-    [SerializeField] private int debugMultiplier = 10;
+    [SerializeField] private int debugMultiplier = 1;
 
     // Start is called before the first frame update
     void Start()
@@ -25,9 +25,6 @@ public class VignetteEffect : MonoBehaviour
         {
             currentTime += Time.deltaTime * debugMultiplier;
             SetIntensity(currentTime / initialTime);
-            Debug.Log("Current Time = " + currentTime);
-            Debug.Log("Value = " + currentTime / initialTime);
-            Debug.Log("Intensity = " + _vignette.intensity.value);
         }
         else
         {
