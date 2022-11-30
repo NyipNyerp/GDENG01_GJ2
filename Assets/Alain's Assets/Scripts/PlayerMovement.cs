@@ -56,7 +56,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (lives <= 0)
         {
-            // GAME OVER = LOSE
+            MapCheckpoints.instance.isGameOver(true);
         }
     }
 }

@@ -1071,7 +1071,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867292725329469766, guid: 7ce2b89894760754dafd533783342923, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.2347064
+      value: 19.083704
       objectReference: {fileID: 0}
     - target: {fileID: 5867292725329469766, guid: 7ce2b89894760754dafd533783342923, type: 3}
       propertyPath: m_LocalPosition.x
@@ -13448,7 +13448,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5867292725329469766, guid: 7ce2b89894760754dafd533783342923, type: 3}
       propertyPath: m_LocalScale.z
-      value: 4.2347064
+      value: 17.507969
       objectReference: {fileID: 0}
     - target: {fileID: 5867292725329469766, guid: 7ce2b89894760754dafd533783342923, type: 3}
       propertyPath: m_LocalPosition.x
@@ -59131,7 +59131,7 @@ MeshRenderer:
   - {fileID: 2100000, guid: 2908e220fcdeedb40a8ab7ac424dfc1c, type: 2}
   - {fileID: 2100000, guid: e371f65b7421e884c9ee9f19a30488c8, type: 2}
   - {fileID: 2100000, guid: 2edf082be65aa904b9181591fc388ec6, type: 2}
-  - {fileID: 2100000, guid: d8e618b4dce53604babdc6426f123233, type: 2}
+  - {fileID: 2100000, guid: 5f208dfd8466dc14d8be8208f9248743, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -63542,6 +63542,7 @@ GameObject:
   - component: {fileID: 8157217691292129155}
   - component: {fileID: 8157217691292129152}
   - component: {fileID: 8157217691292129157}
+  - component: {fileID: 8157217691292129160}
   - component: {fileID: 8157217691292129153}
   - component: {fileID: 8157217691292129159}
   - component: {fileID: 8157217691292129158}
@@ -63590,7 +63591,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8157217691292129156}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 948f4100a11a5c24981795d21301da5c, type: 3}
   m_Name: 
@@ -63643,6 +63644,21 @@ MonoBehaviour:
   m_BeforeTransparentBundles: []
   m_BeforeStackBundles: []
   m_AfterStackBundles: []
+--- !u!114 &8157217691292129160
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8157217691292129156}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f7a3a8875ee3c654083f74f1c07ec57b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  initialTime: 300
+  currentTime: 0
+  debugMultiplier: 1
 --- !u!114 &8335679006798035336
 MonoBehaviour:
   m_ObjectHideFlags: 0

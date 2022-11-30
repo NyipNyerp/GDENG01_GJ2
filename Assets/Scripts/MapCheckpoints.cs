@@ -4,10 +4,19 @@ using UnityEngine;
 
 public class MapCheckpoints : MonoBehaviour
 {
+    public static MapCheckpoints instance;
     private List<CheckpointSingle> checkpointSingleList;
     private int nextCheckpointSingleIndex;
+
+    private bool isLose = false;
     private void Awake()
     {
+        if(instance != null)
+        {
+            return;
+        }
+        instance = this;
+
         Transform checkpointsTransform = transform.Find("Checkpoints");
         checkpointSingleList = new List<CheckpointSingle>();
 
@@ -21,13 +30,16 @@ public class MapCheckpoints : MonoBehaviour
     }
     private void Update()
     {
-        if(nextCheckpointSingleIndex == checkpointSingleList.Count)
+        
+        if(nextCheckpointSingleIndex == checkpointSingleList.Count && !isLose)
         {
             //win
+            Debug.Log("Win");
         }
-        else
+        else if(isLose)
         {
             //lose
+            Debug.Log("Lose");
         }
     }
 
@@ -37,12 +49,19 @@ public class MapCheckpoints : MonoBehaviour
         {
             //Correct Checkpoint
             Debug.Log("Correct");
-        nextCheckpointSingleIndex = (nextCheckpointSingleIndex + 1) % checkpointSingleList.Count;
+            nextCheckpointSingleIndex++;
+            //Debug.Log(nextCheckpointSingleIndex);
+            //Debug.Log(checkpointSingleList.Count);
         }
         else
         {
             // Wrong Checkpoint
             Debug.Log("Wrong");
         }
+    }
+
+    public void isGameOver(bool IsLose)
+    {
+        isLose = IsLose;
     }
 }
