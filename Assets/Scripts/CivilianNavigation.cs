@@ -3,8 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AI;
 
-
-public class ZombieController : MonoBehaviour
+public class CivilianNavigation : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
@@ -17,21 +16,6 @@ public class ZombieController : MonoBehaviour
         agent.SetDestination(playerpos);
 
         animator.SetFloat("Speed", agent.velocity.magnitude);
-        //Debug.Log("Zombie speed = " + agent.velocity.magnitude);
-
-        if (animator.GetBool("isAttacking"))
-        {
-            player.TakeDamage();
-        }
-    }
-
-    private void OnTriggerEnter()
-    {
-        animator.SetBool("isAttacking", true);
-    }
-
-    private void OnTriggerExit()
-    {
-        animator.SetBool("isAttacking", false);
+        Debug.Log("Civilian speed = " + agent.velocity.magnitude);
     }
 }

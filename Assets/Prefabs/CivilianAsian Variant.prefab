@@ -9,7 +9,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1429737846423818191, guid: 1a3b033b5c87c124794efe8053c4a833, type: 3}
       propertyPath: m_Name
-      value: CivilianAsian
+      value: CivilianAsian Variant
       objectReference: {fileID: 0}
     - target: {fileID: 1773470833070986613, guid: 1a3b033b5c87c124794efe8053c4a833, type: 3}
       propertyPath: m_RootOrder
@@ -91,7 +91,7 @@ NavMeshAgent:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6403670861849508377}
   m_Enabled: 1
-  m_AgentTypeID: -1372625422
+  m_AgentTypeID: 0
   m_Radius: 0.5
   m_Speed: 0.5
   m_Acceleration: 8
@@ -105,7 +105,7 @@ NavMeshAgent:
   m_BaseOffset: 0
   m_WalkableMask: 4294967295
   m_ObstacleAvoidanceType: 4
---- !u!114 &55911200
+--- !u!114 &6174489186271696227
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -114,7 +114,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 6403670861849508377}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a7afc3cfe7d3b684bae1407cfad0d38b, type: 3}
+  m_Script: {fileID: 11500000, guid: a4dfdff7dab0d994ebd1a6a31f5da768, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   agent: {fileID: 55911197}
