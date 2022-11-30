@@ -16,6 +16,5 @@ public class CivilianNavigation : MonoBehaviour
         agent.SetDestination(playerpos);
 
         animator.SetFloat("Speed", agent.velocity.magnitude);
-        Debug.Log("Civilian speed = " + agent.velocity.magnitude);
     }
 }

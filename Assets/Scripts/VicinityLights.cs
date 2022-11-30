@@ -4,25 +4,25 @@ using UnityEngine;
 
 public class VicinityLights : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+    private Light _light;
+
+    private void OnTriggerEnter(Collider collision)
     {
-        
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "Spot Light")
+        {
+            collision.gameObject.TryGetComponent(out _light);
+            _light.enabled = true;
+        }
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerExit(Collider collision)
     {
-        
-    }
-
-    private void OnTriggerEnter(Collider other)
-    {
-        //CollidedTarget.SetActive(true);
-    }
-
-    private void OnTriggerExit(Collider other)
-    {
-        //CollidedTarget.SetActive(false);
+        Debug.Log(collision.gameObject.name);
+        if (collision.gameObject.name == "Spot Light")
+        {
+            collision.gameObject.TryGetComponent(out _light);
+            _light.enabled = false;
+        }
     }
 }

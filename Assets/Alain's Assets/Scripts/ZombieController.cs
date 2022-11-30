@@ -17,7 +17,6 @@ public class ZombieController : MonoBehaviour
         agent.SetDestination(playerpos);
 
         animator.SetFloat("Speed", agent.velocity.magnitude);
-        //Debug.Log("Zombie speed = " + agent.velocity.magnitude);
 
         if (animator.GetBool("isAttacking"))
         {
@@ -25,12 +24,12 @@ public class ZombieController : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter()
+    private void OnTriggerEnter(Collider collision)
     {
         animator.SetBool("isAttacking", true);
     }
 
-    private void OnTriggerExit()
+    private void OnTriggerExit(Collider collision)
     {
         animator.SetBool("isAttacking", false);
     }
