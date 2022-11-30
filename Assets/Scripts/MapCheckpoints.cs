@@ -19,6 +19,17 @@ public class MapCheckpoints : MonoBehaviour
         }
         nextCheckpointSingleIndex = 0;
     }
+    private void Update()
+    {
+        if(nextCheckpointSingleIndex == checkpointSingleList.Count)
+        {
+            //win
+        }
+        else
+        {
+            //lose
+        }
+    }
 
     public void PlayerThroughCheckpoint(CheckpointSingle checkpointSingle)
     {
