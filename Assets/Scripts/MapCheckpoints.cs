@@ -39,7 +39,7 @@ public class MapCheckpoints : MonoBehaviour
         else if(isLose)
         {
             //lose
-            Debug.Log("Lose");
+            //Debug.Log("Lose");
         }
     }
 

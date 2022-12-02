@@ -8,20 +8,20 @@ public class VicinityLights : MonoBehaviour
 
     private void OnTriggerEnter(Collider collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "Spot Light")
         {
-            collision.gameObject.TryGetComponent(out _light);
+            collision.TryGetComponent(out _light);
             _light.enabled = true;
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        Debug.Log(collision.gameObject.name);
+        //Debug.Log(collision.gameObject.name);
         if (collision.gameObject.name == "Spot Light")
         {
-            collision.gameObject.TryGetComponent(out _light);
+            collision.TryGetComponent(out _light);
             _light.enabled = false;
         }
     }
