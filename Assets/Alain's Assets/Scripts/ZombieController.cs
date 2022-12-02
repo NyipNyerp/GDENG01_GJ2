@@ -10,7 +10,7 @@ public class ZombieController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerMovement player;
     [SerializeField] private ZombieTargetting zombieTarget;
-
+    Collider collideObject;
     // Update is called once per frame
     void Update()
     {
@@ -27,7 +27,7 @@ public class ZombieController : MonoBehaviour
         }
         animator.SetFloat("Speed", agent.velocity.magnitude);
 
-        if (animator.GetBool("isAttacking"))
+        if (animator.GetBool("isAttacking") && collideObject.gameObject.tag == "Player")
         {
             player.TakeDamage();
         }
@@ -47,6 +47,7 @@ public class ZombieController : MonoBehaviour
 
                 civilian.SetAlive(false);
             }
+            GetCollider(collision);
         }
     }
 
@@ -56,5 +57,10 @@ public class ZombieController : MonoBehaviour
         {
             animator.SetBool("isAttacking", false);
         }
+    }
+
+    private void GetCollider(Collider collision)
+    {
+        collideObject = collision;
     }
 }
