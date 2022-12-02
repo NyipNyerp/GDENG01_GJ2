@@ -5,44 +5,65 @@ using UnityEngine;
 public class ZombieTargetting : MonoBehaviour
 {
     List<GameObject> targets = new List<GameObject>();
-    public GameObject target;
+    [SerializeField] private GameObject target;
     float distance = 100;
     // Update is called once per frame
     void Update()
     {
-        if (targets.Count > 0)
+        if (targets.Count > 0 )
         {
+            Debug.Log(this.gameObject.name + " has " + targets.Count + " targets");
             for (int i = 0; i < targets.Count; i++)
             {
-                float tempDistance = GetDistance(targets[i]);
-                //Debug.Log(targets[i].name + " TempDistance = " + tempDistance);
-                //Debug.Log(targets[i].name + " Distance = " + distance);
-                if (tempDistance < distance)
+                if (targets[i].tag == "Civilian")
                 {
-                    target = ChangeTarget(targets[i]);
+                    CivilianNavigation civilian;
+                    targets[i].TryGetComponent(out civilian);
+
+                    if (!civilian.CheckAlive())
+                    {
+                        Debug.Log(targets[i].name + " has died!!");
+                        targets.Remove(targets[i]);
+                        continue;
+                    }
                 }
-                distance = tempDistance;
+
+                float tempDistance = GetDistance(targets[i]);
+                if (tempDistance < distance && target != null)
+                {
+                    target = targets[i];
+                    distance = tempDistance;
+                }
+                else
+                {
+                    target = targets[i];
+                }
             }
         }
         else
         {
             target = null;
+            distance = 100;
         }
     }
 
+
     private void OnTriggerEnter(Collider other)
     {
-        if (other.name == "FPSPlayer" || other.name == "CivilianAsian")
+        if (other.gameObject.tag == "Player" || other.gameObject.tag == "Civilian")
         {
-            Debug.Log("Spotted: " + other.gameObject.name);
-            targets.Add(other.gameObject);
+            if (!targets.Contains(other.gameObject))
+            {
+                //Debug.Log("Spotted: " + other.gameObject.name);
+                targets.Add(other.gameObject);
+            }
         }
     }
 
     /*
     private void OnTriggerExit(Collider other)
     {
-        if (other.name == "FPSPlayer" || other.name == "CivilianAsian")
+        if (other.name == "FPSPlayer" || other.name == "Civilian")
         {
         targets.Remove(other.gameObject);
         }
@@ -52,13 +73,12 @@ public class ZombieTargetting : MonoBehaviour
     private float GetDistance(GameObject gameObject)
     {
         float dist = Vector3.Distance(this.transform.position, gameObject.transform.position);
-
         return dist;
     }
 
-    private GameObject ChangeTarget(GameObject target)
+    public GameObject GetTarget()
     {
-        Debug.Log("Targeting: " + target.name);
+        //Debug.Log(this.gameObject.name + " Targeting: " + target.name);
         return target;
     }
 }

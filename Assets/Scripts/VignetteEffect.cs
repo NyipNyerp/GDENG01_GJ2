@@ -11,7 +11,7 @@ public class VignetteEffect : MonoBehaviour
     [SerializeField] private float initialTime = 300;
     [SerializeField] private float currentTime = 0;
     [SerializeField] private int debugMultiplier = 1;
-   
+    [SerializeField] private PlayerMovement player;
 
     // Start is called before the first frame update
     void Start()
@@ -25,13 +25,14 @@ public class VignetteEffect : MonoBehaviour
         if (currentTime < initialTime)
         {
             currentTime += Time.deltaTime * debugMultiplier;
+            if (player.lives <= 0) 
+                currentTime = 300;
+
             SetIntensity(currentTime / initialTime);
         }
         else
         {
             MapCheckpoints.instance.isGameOver(true);
-           
-            // GAME OVER = LOSE
         }
     }
 
