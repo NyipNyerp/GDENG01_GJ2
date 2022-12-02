@@ -19,6 +19,8 @@ public class PlayerMovement : MonoBehaviour
 
     [SerializeField] private Animator animator;
     [SerializeField] private float immuneCounter = 5;
+
+    [SerializeField] private GameObject DiePanel;
     public int lives = 5;
 
     void Start()
@@ -54,6 +56,23 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage()
     {
+        if(lives == 4)
+        {
+
+        }
+        else if(lives == 3)
+        {
+
+        }
+        else if(lives == 2)
+        {
+
+        }
+        else if(lives == 1)
+        {
+
+        }
+
         if (immuneCounter < 0 && lives > 0)
         {
             lives--;
@@ -62,6 +81,7 @@ public class PlayerMovement : MonoBehaviour
         else if (lives <= 0)
         {
             animator.SetBool("isAlive", false);
+            DiePanel.SetActive(true);
             MapCheckpoints.instance.isGameOver(true);
         }
     }
