@@ -7,7 +7,7 @@ public class MapCheckpoints : MonoBehaviour
     public static MapCheckpoints instance;
     private List<CheckpointSingle> checkpointSingleList;
     private int nextCheckpointSingleIndex;
-
+    [SerializeField] private GameObject winPanel;
     private bool isLose = false;
     private void Awake()
     {
@@ -35,6 +35,7 @@ public class MapCheckpoints : MonoBehaviour
         {
             //win
             Debug.Log("Win");
+            winPanel.SetActive(true);
         }
         else if(isLose)
         {
