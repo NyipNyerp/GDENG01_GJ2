@@ -21,6 +21,10 @@ public class PanelSwitcher : MonoBehaviour
     }
     public void isPlayPressed()
     {
+        AudioManager.instance.Stop("BGM");
+        AudioManager.instance.Play("GameBGM");
+        AudioManager.instance.Play("ZombieSFX");
+
         SceneManager.LoadScene("MainGame");
     }
 }
