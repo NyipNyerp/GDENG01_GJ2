@@ -12,7 +12,7 @@ public class ZombieTargetting : MonoBehaviour
     {
         if (targets.Count > 0 )
         {
-            Debug.Log(this.gameObject.name + " has " + targets.Count + " targets");
+            //Debug.Log(this.gameObject.name + " has " + targets.Count + " targets");
             for (int i = 0; i < targets.Count; i++)
             {
                 if (targets[i].tag == "Civilian")
@@ -22,7 +22,7 @@ public class ZombieTargetting : MonoBehaviour
 
                     if (!civilian.CheckAlive())
                     {
-                        Debug.Log(targets[i].name + " has died!!");
+                        //Debug.Log(targets[i].name + " has died!!");
                         targets.Remove(targets[i]);
                         continue;
                     }

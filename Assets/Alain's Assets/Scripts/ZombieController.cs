@@ -27,9 +27,12 @@ public class ZombieController : MonoBehaviour
         }
         animator.SetFloat("Speed", agent.velocity.magnitude);
 
-        if (animator.GetBool("isAttacking") && collideObject.gameObject.tag == "Player")
+        if (collideObject != null)
         {
-            player.TakeDamage();
+            if (animator.GetBool("isAttacking") && collideObject.gameObject.tag == "Player")
+            {
+                player.TakeDamage();
+            }
         }
     }
 
@@ -37,7 +40,7 @@ public class ZombieController : MonoBehaviour
     {
         if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Civilian")
         {
-            Debug.Log("Collided with " + collision.gameObject.name);
+            //Debug.Log("Collided with " + collision.gameObject.name);
             animator.SetBool("isAttacking", true);
 
             if (collision.gameObject.tag == "Civilian")
