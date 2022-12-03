@@ -36,6 +36,7 @@ public class MapCheckpoints : MonoBehaviour
             //win
             Debug.Log("Win");
             winPanel.SetActive(true);
+            Time.timeScale = 0;
         }
         else if(isLose)
         {
