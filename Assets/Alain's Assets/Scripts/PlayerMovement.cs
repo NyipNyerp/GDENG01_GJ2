@@ -17,14 +17,23 @@ public class PlayerMovement : MonoBehaviour
     [SerializeField] Vector3 velocity;
     bool isGrounded;
 
-    public int lives = 5;
-    float immuneCounter = 0;
+    [SerializeField] private Animator animator;
+    [SerializeField] private float immuneCounter = 5;
 
-    // Update is called once per frame
+    public int lives = 5;
+
+    void Start()
+    {
+        animator.SetBool("isAlive", true);   
+    }
+
     void Update()
     {
-        Walk();
-        immuneCounter -= Time.deltaTime;
+        if (lives > 0)
+        {
+            Walk();
+            immuneCounter -= Time.deltaTime;
+        }
     }
 
     private void Walk()
@@ -56,6 +65,7 @@ public class PlayerMovement : MonoBehaviour
         }
         else if (lives <= 0)
         {
+            animator.SetBool("isAlive", false);
             MapCheckpoints.instance.isGameOver(true);
         }
     }

@@ -7,7 +7,7 @@ public class MainMenu : MonoBehaviour
 {
     public void isStartPressed()
     {
-        SceneManager.LoadScene("DifficultyScene");
+        SceneManager.LoadScene("InstructionScene");
     }
     public void isQuitPressed()
     {

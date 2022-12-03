@@ -10,44 +10,60 @@ public class ZombieController : MonoBehaviour
     [SerializeField] private Animator animator;
     [SerializeField] private PlayerMovement player;
     [SerializeField] private ZombieTargetting zombieTarget;
-
+    Collider collideObject;
     // Update is called once per frame
     void Update()
     {
-        //Vector3 playerpos = player.transform.position;
-
         Vector3 currentTargetPos;
-        if (zombieTarget.target != null)
+        if (zombieTarget.GetTarget() != null)
         {
-            currentTargetPos = zombieTarget.target.transform.position;
+            currentTargetPos = zombieTarget.GetTarget().transform.position;
             agent.SetDestination(currentTargetPos);
         }
         else
         {
-            agent.SetDestination(agent.gameObject.transform.position);
+            animator.SetBool("isAttacking", false);
+            agent.SetDestination(this.gameObject.transform.position);
         }
         animator.SetFloat("Speed", agent.velocity.magnitude);
 
-        if (animator.GetBool("isAttacking"))
+        if (collideObject != null)
         {
-            player.TakeDamage();
+            if (animator.GetBool("isAttacking") && collideObject.gameObject.tag == "Player")
+            {
+                player.TakeDamage();
+            }
         }
     }
 
     private void OnTriggerEnter(Collider collision)
     {
-        if (collision.gameObject.name == "FPSPlayer" || collision.gameObject.name == "Civilian")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Civilian")
         {
-            Debug.Log("Collided with " + collision.gameObject.name);
+            //Debug.Log("Collided with " + collision.gameObject.name);
             animator.SetBool("isAttacking", true);
+
+            if (collision.gameObject.tag == "Civilian")
+            {
+                CivilianNavigation civilian;
+                collision.gameObject.TryGetComponent(out civilian);
+
+                civilian.SetAlive(false);
+            }
+            GetCollider(collision);
         }
     }
 
     private void OnTriggerExit(Collider collision)
     {
-        if (collision.gameObject.name == "FPSPlayer" || collision.gameObject.name == "CivilianAsian")
+        if (collision.gameObject.tag == "Player" || collision.gameObject.tag == "Civilian")
         {
             animator.SetBool("isAttacking", false);
         }
+    }
+
+    private void GetCollider(Collider collision)
+    {
+        collideObject = collision;
     }
 }

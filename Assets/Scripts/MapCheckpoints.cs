@@ -7,11 +7,14 @@ public class MapCheckpoints : MonoBehaviour
     public static MapCheckpoints instance;
     private List<CheckpointSingle> checkpointSingleList;
     private int nextCheckpointSingleIndex;
-
+    [SerializeField] private GameObject winPanel;
     private bool isLose = false;
+
     private void Awake()
     {
-        if(instance != null)
+        Time.timeScale = 1;
+        Cursor.lockState = CursorLockMode.Locked;
+        if (instance != null)
         {
             return;
         }
@@ -30,11 +33,13 @@ public class MapCheckpoints : MonoBehaviour
     }
     private void Update()
     {
-        
         if(nextCheckpointSingleIndex == checkpointSingleList.Count && !isLose)
         {
             //win
             Debug.Log("Win");
+            winPanel.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+            Time.timeScale = 0;
         }
         else if(isLose)
         {

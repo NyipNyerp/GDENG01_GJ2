@@ -7,14 +7,35 @@ public class CivilianNavigation : MonoBehaviour
 {
     [SerializeField] private NavMeshAgent agent;
     [SerializeField] private Animator animator;
-    [SerializeField] private PlayerMovement player;
+    [SerializeField] private GameObject destination;
+    [SerializeField] private bool isAlive = true;
 
-    // Update is called once per frame
+    void Start()
+    {
+        animator.SetBool("isAlive", true);
+    }
+
     void Update()
     {
-        Vector3 playerpos = player.transform.position;
-        agent.SetDestination(playerpos);
+        Vector3 destinationPos = destination.transform.position;
+        agent.SetDestination(destinationPos);
 
         animator.SetFloat("Speed", agent.velocity.magnitude);
+
+        if (!isAlive)
+        {
+            agent.isStopped = true;
+            animator.SetBool("isAlive", false);
+        }
+    }
+
+    public bool CheckAlive()
+    {
+        return isAlive;
+    }
+
+    public void SetAlive(bool status)
+    {
+        isAlive = status;
     }
 }
