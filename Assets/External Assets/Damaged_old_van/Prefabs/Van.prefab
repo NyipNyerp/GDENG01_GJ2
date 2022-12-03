@@ -242,7 +242,7 @@ PrefabInstance:
     - target: {fileID: 198411205419607112, guid: b9e167e31f640b34f87caab122fca598, type: 3}
       propertyPath: LightsModule.light
       value: 
-      objectReference: {fileID: 5594570205739936543}
+      objectReference: {fileID: 1572573864}
     - target: {fileID: 198411205419607112, guid: b9e167e31f640b34f87caab122fca598, type: 3}
       propertyPath: LightsModule.ratio
       value: 0.5
@@ -253,7 +253,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 198411205419607112, guid: b9e167e31f640b34f87caab122fca598, type: 3}
       propertyPath: LightsModule.maxLights
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 198411205419607112, guid: b9e167e31f640b34f87caab122fca598, type: 3}
       propertyPath: ShapeModule.radius.value
@@ -318,7 +318,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1842522914946788, guid: b9e167e31f640b34f87caab122fca598, type: 3}
   m_PrefabInstance: {fileID: 2859766177009305693}
   m_PrefabAsset: {fileID: 0}
---- !u!108 &5594570205739936543
+--- !u!108 &1572573864
 Light:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -329,9 +329,9 @@ Light:
   serializedVersion: 10
   m_Type: 2
   m_Shape: 0
-  m_Color: {r: 0.8980393, g: 0.4901961, b: 0.19607845, a: 1}
+  m_Color: {r: 1, g: 0.40000004, b: 0.16078432, a: 1}
   m_Intensity: 1
-  m_Range: 0.75
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10
@@ -375,7 +375,7 @@ Light:
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
   m_UseColorTemperature: 0
-  m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
+  m_BoundingSphereOverride: {x: 5.09e-43, y: 33, z: 12, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
   m_ShadowRadius: 0
